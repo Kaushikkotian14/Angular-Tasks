@@ -1,0 +1,14 @@
+<body align="center">
+<h1>Interpolation:{{ title }}</h1><br><br>
+
+<h1>Property Binding </h1><br>
+<img [src]="imageURL" alt="Sample Image"><br><br>
+
+<h1>Event Binding</h1><br>
+<button (click)="click()">Click Event</button><br><br><b>{{greeting}}</b><br><br>
+
+<h1>Two-way Binding </h1>
+<label for="username">Username:</label>
+<input [(ngModel)]="username" ><br>{{username}}<br>
+
+</body>
