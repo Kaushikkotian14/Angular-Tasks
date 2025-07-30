@@ -1,0 +1,5 @@
+ .disabled-style {
+      background-color: gray;
+      color: #ccc;
+      cursor: not-allowed;
+    }

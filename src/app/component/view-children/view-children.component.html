@@ -1,0 +1,14 @@
+<div  [ngStyle]="{'margin-top': '20px','textAlign': 'center'}">
+  <h2>View Children Component</h2>
+<mat-form-field>
+    <mat-label>Enter your First name</mat-label>
+    <input matInput placeholder="Name" #input>
+</mat-form-field>  <br>
+<mat-form-field> 
+    <mat-label>Enter your Surname</mat-label>
+    <input matInput placeholder="Surname"  #input>
+</mat-form-field><br>
+
+<button (click)="submitName()">Submit</button><br>
+{{fullname}}
+</div>
