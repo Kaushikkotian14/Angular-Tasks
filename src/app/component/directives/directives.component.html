@@ -1,0 +1,28 @@
+<div>
+   <input type="text" placeholder="search" [(ngModel)]="searchText" />
+   <span><button [ngClass]="{'disabled-style': !searchText}">Search</button></span>
+</div>
+
+<div>
+    <h3>NgFor,NgStyle</h3>
+    <table>
+        <tr>
+        <th>Book Name</th>
+        <th>Price</th>
+        <th>Availability</th>
+        <th>Action</th>
+        </tr>
+        <tr *ngFor="let book of books">
+          <td>{{ book.name }}</td>
+          <td>{{ book.price }}</td>
+          <td [ngStyle]="{color: book.available ? 'green' : 'red'}">{{ book.available ? 'Available' : 'Not Available' }}</td>
+          <td><button  [ngClass]="{'disabled': !book.available}" [disabled]="!book.available" (click)="onPurchase(book.name)">Purchase</button></td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <h3>NgIf</h3>
+    <button (click)="onClick()">click </button>
+    <p *ngIf="isClicked">Button was clicked</p>
+</div>
